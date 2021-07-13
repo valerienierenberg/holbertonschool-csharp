@@ -14,7 +14,7 @@ namespace _5_print_comb
                 }
                 else
                 {
-                Console.Write(i.ToString("00") + ", ");
+                    Console.Write(i.ToString("00") + ", ");
                 }
             }
         }
