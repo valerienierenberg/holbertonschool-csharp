@@ -13,8 +13,7 @@ namespace _6_print_comb2
             {
                 for (b = a + 1; b <= 9; b++)
                 {
-                    Console.Write(a);
-                    Console.Write(b);
+                    Console.Write(a.ToString() + b.ToString());
                     if (a == 8 && b == 9)
                     {
                         Console.WriteLine();
