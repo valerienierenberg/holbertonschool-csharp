@@ -13,8 +13,6 @@
 
 ## Task Descriptions
 
-
-
 - 0-positive_or_negative/, 0-positive_or_negative/0-positive_or_negative.csproj, 0-positive_or_negative/0-positive_or_negative.cs : program that assigns a random signed number to the variable number each time it is executed.
 - 1-last_digit/, 1-last_digit/1-last_digit.csproj, 1-last_digit/1-last_digit.cs : program will assign a random signed number to the variable number each time it is executed. Then, the script prints whether the last digit of the number stored in the variable number is positive or negative.
 - 2-print_alphabet/, 2-print_alphabet/2-print_alphabet.csproj, 2-print_alphabet/2-print_alphabet.cs : Write a program that prints the alphabet, in lowercase, not followed by a new line.
