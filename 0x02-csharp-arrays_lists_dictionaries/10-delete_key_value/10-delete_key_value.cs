@@ -9,4 +9,3 @@ class Dictionary
         return myDict;
     }
 }
-
