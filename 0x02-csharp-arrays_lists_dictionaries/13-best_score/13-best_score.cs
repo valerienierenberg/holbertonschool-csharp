@@ -8,7 +8,7 @@ class Dictionary
     {
         if (myList.Count == 0)
         {
-            return ("");
+            return ("None");
         }
         else
         {
