@@ -10,10 +10,7 @@ class Dictionary
         {
             return ("None");
         }
-        else
-        {
-            var max = myList.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
-            return max;
-        }
+        var max = myList.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
+        return max;
     }
 }
