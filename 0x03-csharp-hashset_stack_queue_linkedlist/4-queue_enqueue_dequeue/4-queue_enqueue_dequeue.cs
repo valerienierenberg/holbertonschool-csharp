@@ -19,9 +19,9 @@ class MyQueue
         if (aQueue.Contains(search))
         {
             while (aQueue.Dequeue() != search)
-                {
-                    continue;
-                }
+            {
+                continue;
+            }
         }
         aQueue.Enqueue(newItem);
         return aQueue;
