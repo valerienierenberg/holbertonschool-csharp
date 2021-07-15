@@ -7,7 +7,10 @@ class MyQueue
     public static Queue<string> Info(Queue<string> aQueue, string newItem, string search)
     {
         Console.WriteLine("Number of items: " + aQueue.Count);
-        Console.WriteLine("First item: {0}", aQueue.Peek());
+        if (aQueue.Count != 0)
+        {
+            Console.WriteLine("First item: {0}", aQueue.Peek());
+        }
         if (aQueue.Count == 0)
         {
             Console.WriteLine("Queue is empty");
