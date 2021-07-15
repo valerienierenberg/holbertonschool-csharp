@@ -16,7 +16,6 @@ class MyStack
         if (aStack.Contains(search))
         {
             int indexOfSearch = aStack.ToArray().ToList().IndexOf(search);
-            // Console.WriteLine(indexOfSearch);
             while (aStack.Count > indexOfSearch - 1)
             {
                 aStack.Pop();
