@@ -9,7 +9,7 @@ class LList
         {
             return 0;
         }
-        myLList.RemoveFirst();
         return (myLList.First.Value);
+        myLList.RemoveFirst();
     }
 }
