@@ -18,11 +18,10 @@ class MyQueue
         Console.WriteLine("Queue contains \"{0}\": {1}", search, aQueue.Contains(search));
         if (aQueue.Contains(search))
         {
-            int indexOfSearch = aQueue.ToArray().ToList().IndexOf(search);
-            while (aQueue.Count > indexOfSearch + 1)
-            {
-                aQueue.Dequeue();
-            }
+            while (aQueue.Dequeue() != search)
+                {
+                    continue;
+                }
         }
         aQueue.Enqueue(newItem);
         return aQueue;
