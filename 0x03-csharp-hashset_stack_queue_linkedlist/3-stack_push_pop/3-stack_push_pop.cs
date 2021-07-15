@@ -26,11 +26,3 @@ class MyStack
         return aStack;
     }
 }
-
-
-// Print if aStack contains a given item search
-//      Format: Stack contains <search>: <True / False>
-// If aStack contains the given item search, remove all items up to and including search; otherwise, leave aStack as is
-// You can use .Pop() only once
-// Add a new given item newItem to aStack
-// Return aStack
