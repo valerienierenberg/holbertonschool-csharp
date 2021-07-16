@@ -13,3 +13,11 @@ class LList
         return sum;
     }
 }
+
+
+
+// another way using System.Linq
+//    public static int Sum(LinkedList<int> myLList)
+//    {
+//        return myLList.Sum();
+//    }
