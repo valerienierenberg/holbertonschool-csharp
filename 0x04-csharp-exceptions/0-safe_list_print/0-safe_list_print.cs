@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-    class List
+class List
+{
+    public static int SafePrint(List<int> myList, int n)
     {
-        public static int SafePrint(List<int> myList, int n)
+        int count = 0;
+        try
         {
-            int count = 0;
-            try
+            for (int i = 0; i <= myList.Count - 1; i++)
             {
-                for (int i = 0; i <= myList.Count - 1; i++)
+                if (i <= n - 1)
                 {
-                    if (i <= n - 1)
-                    {
-                        Console.WriteLine(myList[i]);
-                        count += 1;
-                    }
+                    Console.WriteLine(myList[i]);
+                    count += 1;
                 }
             }
-            catch (ArgumentOutOfRangeException)
-            {
-                Console.WriteLine("Catch");
-            }
-            return count;
         }
+        catch (ArgumentOutOfRangeException)
+        {
+            Console.WriteLine("Catch");
+        }
+        return count;
     }
+}
