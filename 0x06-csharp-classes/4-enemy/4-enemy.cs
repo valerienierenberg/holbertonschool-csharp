@@ -5,15 +5,15 @@ namespace Enemies
     ///<summary>Represents Zombie class</summary>
     class Zombie
     {
-        public int health;
+        private int _health;
 
         public Zombie()
         {
-            health = 0;
+            _health = 0;
         }
         public Zombie(int value)
         {
-            health = value;
+            _health = value;
             if (value < 0)
             {
                 throw new ArgumentException("Health must be greater than or equal to 0");
@@ -33,7 +33,7 @@ namespace Enemies
         }
         public int GetHealth()
         {
-            return health;
+            return _health;
         }
     }
 }
