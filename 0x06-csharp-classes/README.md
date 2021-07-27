@@ -1,0 +1,86 @@
+# 0x06. C# - Classes and Namespaces
+- [Project Page](https://intranet.hbtn.io/projects/416)
+
+## Learning Objectives
+- How to document C# code with XML comments
+- What is object-oriented programming?
+- What is a namespace
+- What is a class
+- What are objects and instances
+- What is the difference between a class and an object or instance
+- What is a field
+- What is a constructor
+- What is a property
+- How to use get and set
+- When to use a constructor and when to use a property
+- What is this and when to use it
+- What is a method
+- What are access modifiers
+- What is a static class
+- What is a static member
+- What is encapsulation
+- What is polymorphism
+- What is abstraction
+- What does toString do and how to override it
+- What is the difference between a class and a struct
+- When to use a class and when to use a struct
+- What is garbage collection in C#
+- Use XML documentation comments
+- XML Documentation Best Practices
+- All public types / classes and their members should be documented with <summary> tags
+- Private members should be documented but without XML comments
+- To enable XML documentation in your project, you must add this line to the PropertyGroup in your .csproj file:
+    - <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+- Compiling your project with /doc will create an XML file in the directory specified above. With the .xml in the same directory as the compiled assembly, VSCode will automatically read the XML file and use it to provide tooltips with your documentation. Keep this in mind as you write your comments; they should give the programmer clear, concise information about your methods’ purpose and usage.
+
+## Task Descriptions
+- 0-enemy/, 0-enemy/0-enemy.csproj, 0-enemy/0-enemy.cs : Create a new namespace Enemies. Create an empty public class Zombie within Enemies that defines a zombie.
+- 1-enemy/, 1-enemy/1-enemy.csproj, 1-enemy/1-enemy.cs : Based on 0-enemy, write a public class Zombie that defines a zombie by:
+    - public field health
+    - health should be an int and have no value
+    - public constructor: public Zombie()
+        - sets the value of health to 0
+- 2-enemy/, 2-enemy/2-enemy.csproj, 2-enemy/2-enemy.cs : Based on 1-enemy, write a public class Zombie that defines a zombie by:
+    - public field health
+    - health should be an int and have no value
+    - public constructor: public Zombie()
+        - sets the value of health to 0
+    - a new public constructor: public Zombie(int value)
+        - value must be greater than or equal to 0
+        - if value is less than 0, throw an ArgumentException with the message Health must be greater than or equal to 0
+- 3-enemy/, 3-enemy/3-enemy.csproj, 3-enemy/3-enemy.cs : Based on 2-enemy, write a public class Zombie that defines a zombie by:
+    - private field health
+    - health should be an int and have no value
+    - public constructor: public Zombie()
+        - sets the value of health to 0
+    - public constructor: public Zombie(int value)
+        - value must be greater than or equal to 0
+    - public method public int GetHealth() that returns the value of health of the Zombie object
+- 4-enemy/, 4-enemy/4-enemy.csproj, 4-enemy/4-enemy.cs : Based on 3-enemy, write a public class Zombie that defines a zombie by:
+    - private field health
+    - health should be an int and have no value
+    - public constructor: public Zombie()
+        - sets the value of health to 0
+    - public constructor: public Zombie(int value)
+        - value must be greater than or equal to 0
+    - private field name
+    - name should be a string and have a default value of (No name)
+    - public property Name
+        - get: retrieve name
+        - set: set name
+    - public method public int GetHealth() that returns the value of health of the Zombie object
+- 5-enemy/, 5-enemy/5-enemy.csproj, 5-enemy/5-enemy.cs : Based on 4-enemy, write a public class Zombie that defines a zombie by:
+    - private field health
+    - health should be an int and have no value
+    - public constructor: public Zombie()
+        - sets the value of health to 0
+    - public constructor: public Zombie(int value)
+        - value must be greater than or equal to 0
+    - private field name
+    - name should be a string and have a default value of (No name)
+    - public property Name
+        - get: retrieve name
+        - set: set name
+    - public method public int GetHealth() that returns the value of health of the Zombie object
+    - public .toString() override that prints the Zombie object’s attributes to stdout
+        - Format: Zombie Name: <name> / Total Health: <health> (see example below)
