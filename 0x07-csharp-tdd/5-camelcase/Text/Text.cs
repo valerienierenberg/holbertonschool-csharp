@@ -4,8 +4,10 @@
 
 namespace Text
 {
+    ///<summary>Class Str</summary>
     public class Str
     {
+        ///<summary>CamelCase method</summary>
         public static int CamelCase(string s)
         {
             if (s.Length == 0)
