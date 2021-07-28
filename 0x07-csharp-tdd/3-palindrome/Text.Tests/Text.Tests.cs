@@ -17,7 +17,7 @@ namespace Text.Tests
         }
 
         [Test]
-        public void Test2()
+        public void TestNotPal()
         {
             string word = "eyes";
 
@@ -25,5 +25,28 @@ namespace Text.Tests
 
             Assert.AreEqual(false, output);
         }
+
+        [Test]
+        public void TestEmpty()
+        {
+            string word = "";
+
+            bool output = Str.IsPalindrome(word);
+
+            Assert.AreEqual(true, output);
+        }
+
+        [Test]
+        public void TestOneLetter()
+        {
+            string word = "e";
+
+            bool output = Str.IsPalindrome(word);
+
+            Assert.AreEqual(true, output);
+        }
     }
 }
+
+// Notes - is an empty string supposed to be a palindrome (return true?)
+//       - what about a one-letter word?
