@@ -45,6 +45,16 @@ namespace Text.Tests
 
             Assert.AreEqual(true, output);
         }
+
+        [Test]
+        public void TestUpperLowerCasePuncSpaces()
+        {
+            string word = "A man, a plan, a canal: Panama.";
+
+            bool output = Str.IsPalindrome(word);
+
+            Assert.AreEqual(true, output);
+        }
     }
 }
 

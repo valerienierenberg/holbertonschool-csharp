@@ -8,14 +8,19 @@ namespace Text
         ///<summary>IsPalindrome method</summary>
         public static bool IsPalindrome(string s)
         {
-            if (s.Length <= 1)
+            string lower = s.ToLower();
+            lower = lower.Replace(" ", String.Empty);
+            lower = lower.Replace(".", String.Empty);
+            lower = lower.Replace(":", String.Empty);
+            lower = lower.Replace(",", String.Empty);
+            if (lower.Length <= 1)
                 return true;
             else
             {
-                if ( s[0] != s[ s.Length - 1 ] )
+                if (lower[0] != lower[ lower.Length - 1 ])
                     return false;
                 else
-                    return IsPalindrome(s.Substring( 1, s.Length-2 ));
+                    return IsPalindrome(lower.Substring( 1, lower.Length-2 ));
             }
         }
     }
