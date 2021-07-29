@@ -32,5 +32,32 @@ namespace Text.Tests
 
             Assert.AreEqual(0, output);
         }
+
+        [Test]
+        public void TestTwoWords()
+        {
+            string myString = "One Two";
+            int output = Str.CamelCase(myString);
+
+            Assert.AreEqual(2, output);
+        }
+
+        [Test]
+        public void TestOneWord()
+        {
+            string myString = "one";
+            int output = Str.CamelCase(myString);
+
+            Assert.AreEqual(1, output);
+        }
+
+        [Test]
+        public void TestMultWords()
+        {
+            string myString = "oneTwo ThreeFour";
+            int output = Str.CamelCase(myString);
+
+            Assert.AreEqual(4, output);
+        }
     }
 }
