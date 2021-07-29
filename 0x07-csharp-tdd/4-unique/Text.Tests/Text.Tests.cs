@@ -21,7 +21,7 @@ namespace Text.Tests
             string word = "keeeee";
             int output = Str.UniqueChar(word);
 
-            Assert.AreEqual(1, output);
+            Assert.AreEqual(0, output);
         }
 
         [Test]

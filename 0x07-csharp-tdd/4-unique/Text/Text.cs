@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Text
@@ -9,18 +10,26 @@ namespace Text
         ///<summary>UniqueChar method</summary>
         public static int UniqueChar(string s)
         {
-            if (s.Length <= 0)
-                return -1;
-            for (int i = 0; i < s.Length - 1; i++)
+            Dictionary<char,int> dic = new Dictionary<char,int>();
+            for (int i = 0; i < s.Length; i++)
             {
-                if (s[i].ToString() != s[i + 1].ToString())
+                if (!dic.ContainsKey(s[i]))
                 {
-                    return (i + 1);
+                    dic.Add(s[i], 1); 
+                }
+                else
+                {
+                    dic[s[i]] +=1;
+                }
+            }
+            for (int i = 0; i <s.Length; i++)
+            {
+                if (dic[s[i]]==1)
+                {
+                    return i;
                 }
             }
             return -1;
         }
     }
 }
-// Returns: index of first non-repeating character or -1 if there is no non-repeating character
-// You can assume the string contains only lowercase letters, no spaces or special characters
