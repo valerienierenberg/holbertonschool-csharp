@@ -54,13 +54,13 @@ namespace MyMath.Tests
         {
             List<int> myList = new List<int>(); 
 
-            myList.Add(3);
+            myList.Add(-4);
             myList.Add(-3);
-            myList.Add(1);
+            myList.Add(-1);
             
             int output = Operations.Max(myList);
 
-            Assert.AreEqual(3, output);
+            Assert.AreEqual(-1, output);
         }
 
         [Test]
