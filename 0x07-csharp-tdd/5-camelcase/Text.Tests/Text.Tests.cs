@@ -36,7 +36,7 @@ namespace Text.Tests
         [Test]
         public void TestTwoWords()
         {
-            string myString = "One Two";
+            string myString = "one Two";
             int output = Str.CamelCase(myString);
 
             Assert.AreEqual(2, output);
