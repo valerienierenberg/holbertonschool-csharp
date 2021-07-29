@@ -25,5 +25,27 @@ namespace MyMath.Tests
 
             Assert.AreEqual(resultMatrix, output);
         }
+
+        [Test]
+        public void TestNull()
+        {
+            int[,] myMatrix = null;
+            int[,] output = Matrix.Divide(myMatrix, 2);
+            Assert.AreEqual(null, output);
+        }
+
+        [Test]
+        public void TestDivideByZero()
+        {
+            int[,] myMatrix = new int[,]
+            {
+                {2, 4, 6},
+                {8, 10, 12}
+            };
+
+            int[,] output = Matrix.Divide(myMatrix, 0);
+
+            Assert.AreEqual(null, output);
+        }
     }
 }
