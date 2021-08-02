@@ -13,7 +13,6 @@ class Shape
 ///<summary> Rectangle Class </summary>
 class Rectangle : Shape
 {
-    ///<summary> Public method Area</summary>
     private int _width;
     private int _height;
     public int Width
@@ -53,7 +52,7 @@ class Rectangle : Shape
             }
         }
     }
-
+    ///<summary> Public method Area</summary>
     public new int Area()
     {
         return _width * _height;
