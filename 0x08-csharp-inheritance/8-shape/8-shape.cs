@@ -65,7 +65,7 @@ class Rectangle : Shape
 }
 
 ///<summary> Rectangle Class </summary>
-class Square : Shape
+class Square : Rectangle
 {
     private int _size;
     public int Size
@@ -82,8 +82,8 @@ class Square : Shape
             }
             else
             {
-                //_height = value;
-                //_width = value;
+                Height = value;
+                Width = value;
                 _size = value;
             }
         }
