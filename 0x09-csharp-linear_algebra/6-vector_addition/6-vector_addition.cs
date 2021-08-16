@@ -6,7 +6,7 @@ class VectorMath
     ///<summary>Method that adds two vectors (2D or 3D) and returns the resulting vector</summary>
     public static double[] Add(double[] vector1, double[] vector2)
     {
-            double[] sumVector = new double[1] {1};
+            double[] sumVector = new double[1] {-1};
             // If they are both 2D vectors
             if (vector1.Length == 2 && vector2.Length == 2)
             {
