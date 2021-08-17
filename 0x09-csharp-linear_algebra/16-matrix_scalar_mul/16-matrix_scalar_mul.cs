@@ -1,5 +1,6 @@
 ﻿using System;
 
+///<summary>Matrix Math class</summary>
 class MatrixMath
 {
     ///<summary>Method that multiplies a matrix and a scalar and returns the resulting matrix</summary>
