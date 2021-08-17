@@ -1,6 +1,7 @@
 ﻿using System;
 // similar set up to task 3, because they both do not return vectors
 
+///<summary>Vector Math class</summary>
 class VectorMath
 {
     ///<summary>Method that calculates dot product of either two 2D or two 3D vectors.</summary>
