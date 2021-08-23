@@ -22,13 +22,11 @@ class MatrixMath
         {
             shear[0, 1] = factor;
         }
-
-        if (direction != 'x' && direction != 'y')
+        else if (direction != 'x' && direction != 'y')
         {
             return newMatrixDefault;
         }
-
-        if (matrix.GetLength(0) != 2 && matrix.GetLength(1) != 2)
+        else
         {
             return newMatrixDefault;
         }
