@@ -11,7 +11,7 @@ class MatrixMath
         {
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                newMatrix[i, j] = matrix[j, i];
+                newMatrix[j, i] = matrix[i, j];
             }
         }
         return newMatrix;
