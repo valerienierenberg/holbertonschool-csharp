@@ -22,7 +22,7 @@ class MatrixMath
             {
                 for (int k = 0; k < 2; k++)
                 {
-                    matrix3[i, j] = Math.Round(matrix3[i, j] + (matrix[i, k] * rotate[k, j]), 2);
+                    newMatrix[i, j] = Math.Round(newMatrix[i, j] + (matrix[i, k] * rotate[k, j]), 2);
                 }
             }
         }
