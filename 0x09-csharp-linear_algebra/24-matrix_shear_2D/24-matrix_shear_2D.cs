@@ -8,7 +8,7 @@ class MatrixMath
         double[,] newMatrix = new double[2, 2];
         double[,] shear = new double[2, 2] {{1, 0}, {0, 1}};
 
-        if (direction != 'x' && direction != 'y')
+        if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
         {
             return newMatrixDefault;
         }
@@ -21,6 +21,11 @@ class MatrixMath
         if (direction == 'y')
         {
             shear[0, 1] = factor;
+        }
+
+        if (direction != 'x' && direction != 'y')
+        {
+            return newMatrixDefault;
         }
 
         if (matrix.GetLength(0) != 2 && matrix.GetLength(1) != 2)
