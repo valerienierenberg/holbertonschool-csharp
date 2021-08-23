@@ -10,11 +10,11 @@ class MatrixMath
         int column = matrix.GetLength(1);
         double[,] newMatrix = new double[2, 2];
         double[,] rotate = new double[2, 2] {{Math.Cos(angle), Math.Sin(angle)}, {-1 * Math.Sin(angle), Math.Cos(angle)}};
-        double[,] default = new double[,] {{-1}};
+        double[,] defaultMatrix = new double[,] {{-1}};
 
         if (row != 2 || column != 2)
         {
-           return default;
+           return defaultMatrix;
         }
         for (int i = 0; i < row; i++)
         {
