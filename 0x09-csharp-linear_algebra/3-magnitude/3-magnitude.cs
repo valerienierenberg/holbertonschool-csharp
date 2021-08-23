@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Numerics;
 
 ///<summary>Vector Math class</summary>
 class VectorMath
