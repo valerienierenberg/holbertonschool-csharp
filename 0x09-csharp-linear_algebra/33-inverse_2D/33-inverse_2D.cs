@@ -8,7 +8,7 @@ class MatrixMath
         var colCount = matrix.GetLength(1);  
 
         if (rowCount != colCount)  
-            throw new InvalidOperationException(Properties.Resources.Exception_RequiredSquareMatrix);  
+            return -1;
 
         var newMatrix = ConcatHorizontally(matrix, CreateIdentityMatrix(rowCount));  
 
