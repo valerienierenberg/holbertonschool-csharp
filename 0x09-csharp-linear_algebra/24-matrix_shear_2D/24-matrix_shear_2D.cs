@@ -31,7 +31,7 @@ class MatrixMath
         {
             for (int j = 0; j < 2; j++)
             {
-              for (int k = 0; j < 2; j++)  
+              for (int k = 0; k < 2; k++)  
                 {
                     newMatrix[i, j] = newMatrix[i, j] + (matrix[i, k] * shear[k, j]);
                 }

@@ -7,7 +7,7 @@ class Program
     {
         double[,] matrixOne2d =  { { 1, 2 }, { 3, 4 } };
         char direction = 'x';
-        double factor = 2;
+        double factor = 2.2;
         double[,] res2d;
 
         res2d = MatrixMath.Shear2D(matrixOne2d, direction, factor);
