@@ -11,7 +11,7 @@ class MatrixMath
         double[,] newMatrix = new double[2, 2];
         double[,] rotate = new double[2, 2] {{Math.Cos(angle), Math.Sin(angle)}, {-1 * Math.Sin(angle), Math.Cos(angle)}};
         
-        if (matrix.GetLength(0) != 2 && matrix.GetLength(1) != 2)
+        if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
         {
             return newMatrixDefault;
         }
