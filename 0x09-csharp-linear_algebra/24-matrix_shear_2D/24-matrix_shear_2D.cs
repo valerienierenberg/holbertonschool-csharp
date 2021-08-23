@@ -18,13 +18,9 @@ class MatrixMath
             shear[1, 0] = factor;
         }
 
-        if (direction == 'y')
+        else if (direction == 'y')
         {
             shear[0, 1] = factor;
-        }
-        else if (direction != 'x' && direction != 'y')
-        {
-            return newMatrixDefault;
         }
         else
         {
