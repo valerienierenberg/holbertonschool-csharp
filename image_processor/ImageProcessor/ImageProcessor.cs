@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 /// <summary> Image Processor Class </summary>
 class ImageProcessor
@@ -16,7 +17,8 @@ class ImageProcessor
 
             Bitmap temp = new Bitmap(file);
             Bitmap bmap = (Bitmap)temp.Clone();
-                Color c;
+            Color c;
+    
             for (int i = 0; i < bmap.Width; i++)
             {
                 for (int j = 0; j < bmap.Height; j++)
@@ -42,7 +44,8 @@ class ImageProcessor
 
             Bitmap temp = new Bitmap(file);
             Bitmap bmap = (Bitmap)temp.Clone();
-                Color c;
+            Color c;
+    
             for (int i = 0; i < bmap.Width; i++)
             {
                 for (int j = 0; j < bmap.Height; j++)
@@ -68,7 +71,7 @@ class ImageProcessor
 
             Bitmap temp = new Bitmap(file);
             Bitmap bmap = (Bitmap)temp.Clone();
-                Color c;
+            Color c;
 
             for (int i = 0; i < bmap.Width; i++)
             {
@@ -93,4 +96,49 @@ class ImageProcessor
         }
     }
 
+    /// <summary> Thumbnail method </summary>
+    public static void Thumbnail(string[] filenames, int height)
+    {
+        foreach (string file in filenames)
+        {
+            string fileWithoutImages = file.Remove(0, 7);
+            string fileWithoutImagesAndJPG = fileWithoutImages.Remove(fileWithoutImages.Length - 4, 4);
+            string fileThumb = fileWithoutImagesAndJPG + "_th" + ".jpg";
+            // Console.WriteLine(fileBW);
+
+            Bitmap temp = new Bitmap(file);
+            Bitmap bmap = (Bitmap)temp.Clone();
+            int imageHeight = bmap.Height;
+            int imageWidth = bmap.Width;
+            //Console.WriteLine(imageHeight.ToString() + " " + imageWidth.ToString());
+            double aspectRatioX = (double)imageWidth / imageHeight;
+            //Console.WriteLine(aspectRatioX);
+            int thumbWidth = (int)(height * aspectRatioX);
+
+            Image thumb = bmap.GetThumbnailImage(thumbWidth, height, ()=>false, IntPtr.Zero);
+            
+            var qualityEncoder = System.Drawing.Imaging.Encoder.Quality;
+            var quality = (long)100; //Image Quality 
+            var ratio = new EncoderParameter(qualityEncoder, quality);
+            var codecParams = new EncoderParameters(1);
+            codecParams.Param[0] = ratio;
+            var codecInfo = GetEncoder(ImageFormat.Jpeg);
+
+            thumb.Save("C:\\Users\\Valerie\\holbertonschool-csharp\\image_processor\\" + fileThumb, codecInfo, codecParams);
+        }
+    }
+
+
+    private static ImageCodecInfo GetEncoder(ImageFormat format)
+    {
+        ImageCodecInfo[] codecs = ImageCodecInfo.GetImageDecoders();
+        foreach (ImageCodecInfo codec in codecs)
+        {
+            if (codec.FormatID == format.Guid)
+            {
+                return codec;
+            }
+        }
+        return null;
+    }
 }
