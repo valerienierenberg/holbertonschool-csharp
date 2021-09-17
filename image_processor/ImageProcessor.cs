@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Threading;
+using System.IO;
 
 /// <summary> Image Processor Class </summary>
 class ImageProcessor
@@ -8,14 +10,14 @@ class ImageProcessor
     /// <summary> Inverse method </summary>
     public static void Inverse(string[] filenames)
     {
-        foreach (string file in filenames)
+        foreach (string filename in filenames)
         {
-            string fileWithoutImages = file.Remove(0, 7);
-            string fileWithoutImagesAndJPG = fileWithoutImages.Remove(fileWithoutImages.Length - 4, 4);
-            string fileAddInverse = fileWithoutImagesAndJPG + "_inverse" + ".jpg";
+            // string fileWithoutImages = file.Remove(0, 7);
+            // string fileWithoutImagesAndJPG = fileWithoutImages.Remove(fileWithoutImages.Length - 4, 4);
+            // string fileAddInverse = fileWithoutImagesAndJPG + "_inverse" + ".jpg";
             // Console.WriteLine(fileAddInverse);
 
-            Bitmap temp = new Bitmap(file);
+            Bitmap temp = new Bitmap(filename);
             Bitmap bmap = (Bitmap)temp.Clone();
             Color c;
     
@@ -27,8 +29,10 @@ class ImageProcessor
                     bmap.SetPixel(i, j, Color.FromArgb(255 - c.R, 255 - c.G, 255 - c.B));
                 }
             }
+
+            string new_filename = Path.GetFileNameWithoutExtension(filename) + "_inverse" + Path.GetExtension(filename);
             temp = (Bitmap)bmap.Clone();
-            temp.Save("C:\\Users\\Valerie\\holbertonschool-csharp\\image_processor\\" + fileAddInverse);
+            temp.Save(new_filename);
         }
     }
 
