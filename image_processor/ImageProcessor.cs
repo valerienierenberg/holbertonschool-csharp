@@ -41,7 +41,7 @@ class ImageProcessor
                     bitmap.SetPixel(i, j, Color.FromArgb(gray, gray, gray));
                 }
             }
-            string new_filename = Path.GetFileNameWithoutExtension(filename) + "_inverse" + Path.GetExtension(filename);
+            string new_filename = Path.GetFileNameWithoutExtension(filename) + "_grayscale" + Path.GetExtension(filename);
             bitmap.Save(new_filename);
         }
     }
