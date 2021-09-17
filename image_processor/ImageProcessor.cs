@@ -22,7 +22,6 @@ class ImageProcessor
             bitmap.Save(new_filename);
         }
     }
-}
 
  /// <summary> Inverse method </summary>
  public static void Grayscale(string[] filenames) 
