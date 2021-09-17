@@ -30,13 +30,12 @@ class ImageProcessor
         foreach (string filename in filenames)
         {
             Bitmap bitmap = new Bitmap(file);
-            Color c;
 
             for (int i = 0; i < bmap.Width; i++)
             {
                 for (int j = 0; j < bmap.Height; j++)
                 {
-                    c = bmap.GetPixel(i, j);
+                    Color c = bmap.GetPixel(i, j);
                     byte gray = (byte)(.299 * c.R + .587 * c.G + .114 * c.B);
                     bmap.SetPixel(i, j, Color.FromArgb(gray, gray, gray));
                 }
@@ -50,17 +49,15 @@ class ImageProcessor
     public static void BlackWhite(string[] filenames, double threshold) {
     foreach (string file in filenames)
     {
-        Bitmap temp = new Bitmap(file);
-        Bitmap bmap = (Bitmap)temp.Clone();
-        Color c;
+        Bitmap bmap = new Bitmap(file);
 
         for (int i = 0; i < bmap.Width; i++)
         {
         for (int j = 0; j < bmap.Height; j++)
         {
-        c = bmap.GetPixel(i, j);
-        double luminance = ((c.R * 0.3) + (c.G * 0.59) + (c.B * 0.11));
-        if (luminance < threshold)
+            Color c = bmap.GetPixel(i, j);
+            double luminance = ((c.R * 0.3) + (c.G * 0.59) + (c.B * 0.11));
+            if (luminance < threshold)
         {
         bmap.SetPixel(i, j, Color.FromArgb(0, 0, 0));
         }
