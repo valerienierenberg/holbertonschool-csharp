@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>image_processor</name>
+    </assembly>
+    <members>
+        <member name="T:ImageProcessor">
+            <summary> Image Processor Class </summary>
+        </member>
+        <member name="M:ImageProcessor.Inverse(System.String[])">
+            <summary> Inverse method </summary>
+        </member>
+        <member name="M:ImageProcessor.Grayscale(System.String[])">
+            <summary> Inverse method </summary>
+        </member>
+        <member name="M:ImageProcessor.BlackWhite(System.String[],System.Double)">
+            <summary> Inverse method </summary>
+        </member>
+        <member name="M:ImageProcessor.Thumbnail(System.String[],System.Int32)">
+            <summary> Thumbnail method </summary>
+        </member>
+    </members>
+</doc>

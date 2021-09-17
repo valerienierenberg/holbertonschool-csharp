@@ -1,0 +1,12 @@
+C:\Users\Valerie\holbertonschool-csharp\image_processor\obj\Debug\netcoreapp2.1\image_processor.csprojAssemblyReference.cache
+C:\Users\Valerie\holbertonschool-csharp\image_processor\obj\Debug\netcoreapp2.1\image_processor.csproj.CoreCompileInputs.cache
+C:\Users\Valerie\holbertonschool-csharp\image_processor\obj\Debug\netcoreapp2.1\image_processor.AssemblyInfoInputs.cache
+C:\Users\Valerie\holbertonschool-csharp\image_processor\obj\Debug\netcoreapp2.1\image_processor.AssemblyInfo.cs
+C:\Users\Valerie\holbertonschool-csharp\image_processor\bin\Debug\netcoreapp2.1\image_processor.xml
+C:\Users\Valerie\holbertonschool-csharp\image_processor\bin\Debug\netcoreapp2.1\image_processor.deps.json
+C:\Users\Valerie\holbertonschool-csharp\image_processor\bin\Debug\netcoreapp2.1\image_processor.runtimeconfig.json
+C:\Users\Valerie\holbertonschool-csharp\image_processor\bin\Debug\netcoreapp2.1\image_processor.runtimeconfig.dev.json
+C:\Users\Valerie\holbertonschool-csharp\image_processor\bin\Debug\netcoreapp2.1\image_processor.dll
+C:\Users\Valerie\holbertonschool-csharp\image_processor\bin\Debug\netcoreapp2.1\image_processor.pdb
+C:\Users\Valerie\holbertonschool-csharp\image_processor\obj\Debug\netcoreapp2.1\image_processor.dll
+C:\Users\Valerie\holbertonschool-csharp\image_processor\obj\Debug\netcoreapp2.1\image_processor.pdb
