@@ -46,35 +46,36 @@ class ImageProcessor
         }
     }
 
-//     /// <summary> BlackWhite method </summary>
-//     public static void BlackWhite(string[] filenames, double threshold) {
-//     foreach (string file in filenames)
-//     {
-//         Bitmap bmap = new Bitmap(file);
-
-//         for (int i = 0; i < bmap.Width; i++)
-//         {
-//         for (int j = 0; j < bmap.Height; j++)
-//         {
-//             Color c = bmap.GetPixel(i, j);
-//             double luminance = ((c.R * 0.3) + (c.G * 0.59) + (c.B * 0.11));
-//             if (luminance < threshold)
-//         {
-//         bmap.SetPixel(i, j, Color.FromArgb(0, 0, 0));
-//         }
-//         else
-//         {
-//         bmap.SetPixel(i, j, Color.FromArgb(255, 255, 255));
-//         }
-//         //byte gray = (byte)(.299 * c.R + .587 * c.G + .114 * c.B);
-//         //bmap.SetPixel(i, j, Color.FromArgb(gray, gray, gray));
-//         }
-//         }
-//         temp = (Bitmap)bmap.Clone();
-//         temp.Save("C:\\Users\\Valerie\\holbertonschool-csharp\\image_processor\\" + fileBW);
-//     }
-//     }
-
+    /// <summary> BlackWhite method </summary>
+    public static void BlackWhite(string[] filenames, double threshold) {
+    {
+        foreach (string filename in filenames)
+        {
+            Bitmap bitmap = new Bitmap(filename);
+            Color c;
+            for (int i = 0; i < bitmap.Width; i++)
+            {
+                for (int j = 0; j < bitmap.Height; j++)
+                {
+                    c = bitmap.GetPixel(i, j);
+                    double luminance = ((c.R * 0.3) + (c.G * 0.59) + (c.B * 0.11));
+                    if (luminance < threshold)
+                    {
+                        bitmap.SetPixel(i, j, Color.FromArgb(0, 0, 0));
+                    }
+                    else
+                    {
+                        bitmap.SetPixel(i, j, Color.FromArgb(255, 255, 255));
+                    }
+                    //byte gray = (byte)(.299 * c.R + .587 * c.G + .114 * c.B);
+                    //bmap.SetPixel(i, j, Color.FromArgb(gray, gray, gray));
+                    }
+                }
+            string new_filename = Path.GetFileNameWithoutExtension(filename) + "_bw" + Path.GetExtension(filename);
+            bitmap.Save(new_filename);
+        }
+    }
+    }
 //  /// <summary> Thumbnail method </summary>
 //  public static void Thumbnail(string[] filenames, int height)
 //  {
