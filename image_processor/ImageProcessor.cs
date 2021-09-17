@@ -25,28 +25,28 @@ class ImageProcessor
         }
     }
 
-//     /// <summary> Grayscale method </summary>
-//     public static void Grayscale(string[] filenames) 
-//     {
-//         foreach (string filename in filenames)
-//         {
-//             Bitmap bitmap = new Bitmap(filename);
+    /// <summary> Grayscale method </summary>
+    public static void Grayscale(string[] filenames) 
+    {
+        foreach (string filename in filenames)
+        {
+            Bitmap bitmap = new Bitmap(filename);
+            Color c;
+            for (int i = 0; i < bitmap.Width; i++)
+            {
+                for (int j = 0; j < bitmap.Height; j++)
+                {
+                    c = bitmap.GetPixel(i, j);
+                    byte gray = (byte)(.299 * c.R + .587 * c.G + .114 * c.B);
+                    bitmap.SetPixel(i, j, Color.FromArgb(gray, gray, gray));
+                }
+            }
+            string new_filename = Path.GetFileNameWithoutExtension(filename) + "_inverse" + Path.GetExtension(filename);
+            bitmap.Save(new_filename);
+        }
+    }
 
-//             for (int i = 0; i < bitmap.Width; i++)
-//             {
-//                 for (int j = 0; j < bitmap.Height; j++)
-//                 {
-//                     Color c = bitmap.GetPixel(i, j);
-//                     byte gray = (byte)(.299 * c.R + .587 * c.G + .114 * c.B);
-//                     bitmap.SetPixel(i, j, Color.FromArgb(gray, gray, gray));
-//                 }
-//             }
-//             string new_filename = Path.GetFileNameWithoutExtension(filename) + "_inverse" + Path.GetExtension(filename);
-//             bitmap.Save(new_filename);
-//         }
-//     }
-
-//     /// <summary> Inverse method </summary>
+//     /// <summary> BlackWhite method </summary>
 //     public static void BlackWhite(string[] filenames, double threshold) {
 //     foreach (string file in filenames)
 //     {
