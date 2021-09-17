@@ -30,7 +30,7 @@ class ImageProcessor
     {
         foreach (string filename in filenames)
         {
-            Bitmap bitmap = new Bitmap(file);
+            Bitmap bitmap = new Bitmap(filename);
 
             for (int i = 0; i < bitmap.Width; i++)
             {
