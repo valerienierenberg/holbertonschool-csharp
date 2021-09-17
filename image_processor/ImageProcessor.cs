@@ -25,20 +25,20 @@ class ImageProcessor
         }
     }
 
-    /// <summary> Inverse method </summary>
+    /// <summary> Grayscale method </summary>
     public static void Grayscale(string[] filenames) 
     {
         foreach (string filename in filenames)
         {
             Bitmap bitmap = new Bitmap(file);
 
-            for (int i = 0; i < bmap.Width; i++)
+            for (int i = 0; i < bitmap.Width; i++)
             {
-                for (int j = 0; j < bmap.Height; j++)
+                for (int j = 0; j < bitmap.Height; j++)
                 {
-                    Color c = bmap.GetPixel(i, j);
+                    Color c = bitmap.GetPixel(i, j);
                     byte gray = (byte)(.299 * c.R + .587 * c.G + .114 * c.B);
-                    bmap.SetPixel(i, j, Color.FromArgb(gray, gray, gray));
+                    bitmap.SetPixel(i, j, Color.FromArgb(gray, gray, gray));
                 }
             }
             string new_filename = Path.GetFileNameWithoutExtension(filename) + "_inverse" + Path.GetExtension(filename);
