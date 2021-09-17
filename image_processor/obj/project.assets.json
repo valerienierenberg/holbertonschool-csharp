@@ -807,9 +807,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Valerie\\holbertonschool-csharp\\image_processor\\image_processor.csproj",
-      "projectName": "image_processor",
-      "projectPath": "C:\\Users\\Valerie\\holbertonschool-csharp\\image_processor\\image_processor.csproj",
+      "projectUniqueName": "C:\\Users\\Valerie\\holbertonschool-csharp\\image_processor\\ImageProcessor.csproj",
+      "projectName": "ImageProcessor",
+      "projectPath": "C:\\Users\\Valerie\\holbertonschool-csharp\\image_processor\\ImageProcessor.csproj",
       "packagesPath": "C:\\Users\\Valerie\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Valerie\\holbertonschool-csharp\\image_processor\\obj\\",
       "projectStyle": "PackageReference",
