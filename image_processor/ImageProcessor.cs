@@ -10,6 +10,7 @@ class ImageProcessor
         foreach (string filename in filenames)
         {
             Bitmap bitmap = new Bitmap(filename);
+            Color c;
             for (int x = 0; x < bitmap.Width; x++)
             {
                 for (int y = 0; y < bitmap.Height; y++)
