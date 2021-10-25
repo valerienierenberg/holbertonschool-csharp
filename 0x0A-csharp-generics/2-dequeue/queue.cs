@@ -49,16 +49,12 @@ class Queue<T>
         }
         count++;
     }
-    public int Count()
-    {
-        return count;
-    }
 
+    ///<summary>Dequeue Method</summary>
     public T Dequeue()
     {
         if (head == null)
         {
-            Console.WriteLine("Queue is empty");
             return default(T);
         }
         else
@@ -68,6 +64,12 @@ class Queue<T>
             count--;
             return value;
         }
+    }
+
+    ///<summary>Count Method</summary>
+    public int Count()
+    {
+        return count;
     }
 }
 
