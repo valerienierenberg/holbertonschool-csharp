@@ -87,6 +87,7 @@ class Queue<T>
         }
     }
 
+    ///<summary>Print method</summary>
     public void Print()
     {
         Node current = head;
