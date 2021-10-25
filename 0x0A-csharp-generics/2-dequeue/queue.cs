@@ -36,7 +36,7 @@ class Queue<T>
         if (head == null)
         {
             head = newNode;
-            //tail = newNode;
+            tail = newNode;
         }
         else if (tail == null)
         {
@@ -71,6 +71,20 @@ class Queue<T>
     public int Count()
     {
         return count;
+    }
+
+    ///<summary>Peek Method</summary>
+    public T Peek()
+    {
+        if (head == null)
+        {
+            Console.WriteLine("Queue is empty");
+            return default(T);
+        }
+        else
+        {
+            return head.value;
+        }
     }
 }
 
