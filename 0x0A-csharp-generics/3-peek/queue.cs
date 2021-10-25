@@ -72,5 +72,18 @@ class Queue<T>
     {
         return count;
     }
-}
 
+    ///<summary>Peek Method</summary>
+    public T Peek()
+    {
+        if (head == null)
+        {
+            Console.WriteLine("Queue is empty");
+            return default(T);
+        }
+        else
+        {
+            return head.value;
+        }
+    }
+}
