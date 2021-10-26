@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 
 ///<summary>Abstract Base class</summary>
 public abstract class Base
@@ -160,5 +161,30 @@ public class RoomObjects
                 iItem.Collect();
             }
         }
+    }
+}
+
+///<summary> class Objs<T/> : list all objects </summary>
+class Objs<T> : IEnumerable<T>
+{
+    ///<summary> public List<T/> objsList </summary>
+    List<T> listy = new List<T>();
+
+    ///<summary> public method Add() </summary>
+    public void Add(T obj)
+    {
+        listy.Add(obj);
+    }
+
+    ///<summary> public method IEnumerator<T/> GetEnumerator </summary>
+    public IEnumerator<T> GetEnumerator()
+    {
+        return listy.GetEnumerator();
+    }
+
+    ///<summary> public method IEnumerator GetEnumerator </summary>
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return this.GetEnumerator();
     }
 }
