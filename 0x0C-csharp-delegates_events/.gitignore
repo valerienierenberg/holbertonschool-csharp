@@ -1,0 +1,10 @@
+# Ignore bin and obj folders for c sharp
+*.suo
+*.user
+_ReSharper.*
+bin/
+obj/
+packages
+
+# ignore 0-main.cs files
+0-main.cs
