@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/7FukkqLvR0q4Ey6rQ+zZOcSWNoICCyv52b9u90PRAgwiVYwtUO52forE07IhBWh7B+4LAuxOb64l6iZ15jTyg==",
+  "dgSpecHash": "IpLX10qha5L19+rYN4zDX+OmgVKa/A8c8wxv+80dWji/vvd8GKAJxy+bbRpstfKZgY46v4/addDQru6uvnLJOw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Valerie\\holbertonschool-csharp\\0x0D-csharp-text_based_interface\\InventoryManagement\\InventoryLibrary\\InventoryLibrary.csproj",
+  "projectFilePath": "C:\\Users\\Valerie\\holbertonschool-csharp\\0x0D-csharp-text_based_interface\\InventoryLibrary\\InventoryLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",

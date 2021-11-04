@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Valerie\\holbertonschool-csharp\\0x0D-csharp-text_based_interface\\InventoryManagement\\InventoryLibrary\\InventoryLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Valerie\\holbertonschool-csharp\\0x0D-csharp-text_based_interface\\InventoryLibrary\\InventoryLibrary.csproj",
       "projectName": "InventoryLibrary",
-      "projectPath": "C:\\Users\\Valerie\\holbertonschool-csharp\\0x0D-csharp-text_based_interface\\InventoryManagement\\InventoryLibrary\\InventoryLibrary.csproj",
+      "projectPath": "C:\\Users\\Valerie\\holbertonschool-csharp\\0x0D-csharp-text_based_interface\\InventoryLibrary\\InventoryLibrary.csproj",
       "packagesPath": "C:\\Users\\Valerie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Valerie\\holbertonschool-csharp\\0x0D-csharp-text_based_interface\\InventoryManagement\\InventoryLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Valerie\\holbertonschool-csharp\\0x0D-csharp-text_based_interface\\InventoryLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
